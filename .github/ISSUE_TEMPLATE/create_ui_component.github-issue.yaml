@@ -1,0 +1,75 @@
+name: Create New UI Component
+
+description: Template for creating a new UI component in the component library.
+
+title: "Create UI Component for..."
+
+labels: [UI, component]
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a description of the UI component to be created.
+      placeholder: "Enter the UI component description..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide the context where this UI component will be used.
+      placeholder: "Enter the context for the component..."
+    validations:
+      required: true
+
+  - type: input
+    id: design_reference
+    attributes:
+      label: Design Reference
+      description: Provide a link or reference to the design specs (Figma, Sketch, etc.).
+      placeholder: "Enter the design reference link..."
+    validations:
+      required: true
+
+  - type: input
+    id: component_path
+    attributes:
+      label: Save Component Path
+      description: Provide the full filepath where the component should be saved.
+      placeholder: "Enter the full file path..."
+      value: "src/components/{{PascalCaseComponentName}}.tsx"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Acceptance Criteria:
+        - [ ] The component follows the design specifications.
+        - [ ] The component is responsive and accessible.
+        - [ ] The component is tested with unit and integration tests.
+        - [ ] The file is located at the specified filepath: `src/components/{{ComponentName}}.tsx`.
+        - [ ] Storybook documentation is created for the component.
+        - [ ] A pull request (PR) is created with the changes including component files and tests.
+
+        [Pull Request Guide: Github]("https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request")
+
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      id: subtasks
+      label: Subtasks
+      value: |
+        - [ ] Implement the component based on design specifications.
+        - [ ] Ensure the component is responsive and accessible.
+        - [ ] Write unit and integration tests.
+        - [ ] Document the component in Storybook.
+        - [ ] Create a pull request with all changes.
+
+        ## Blocking
+        - Component integration tasks (Ensuring the component works within the system)
+        - Design approval tasks (Verifying the component matches design standards)

@@ -46,7 +46,6 @@ body:
 
   - type: markdown
     attributes:
-      label: "Acceptance Criteria"
       value: |
         ## Acceptance Criteria:
         - [ ] The component follows the design specifications.

@@ -61,7 +61,7 @@
                 "description": "Whether the form element is required."
               }
             },
-            "required": ["label"]
+            "required": []
           }
         },
         "required": ["type", "attributes"]
